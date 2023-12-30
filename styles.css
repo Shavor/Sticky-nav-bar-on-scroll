@@ -67,6 +67,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   font-size: 4.5rem;
   color: var(--color-sec);
@@ -122,6 +123,27 @@ h2 {
   align-items: center;
 }
 
-.flex > * {
+.flex>* {
   margin: 3px;
+}
+
+/* SCROLL to TOP */
+.top {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: transparent;
+  padding: 1rem;
+  border: 1px solid black;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 111;
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: all 0.3s;
+}
+
+.show-btn {
+  opacity: 1;
+  transform: translateY(0);
 }
