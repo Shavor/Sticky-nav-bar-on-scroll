@@ -66,6 +66,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -77,6 +78,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .nav-list li {
@@ -146,4 +148,72 @@ h2 {
 .show-btn {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Scroll Indicatar CSS */
+.scroll-indicator {
+  width: 100%;
+  height: 3px;
+  background-color: var(--grey);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  visibility: hidden;
+}
+
+.progress {
+  width: 5%;
+  height: 3px;
+  background-color: var(--color-sec);
+}
+
+/* RESPONSIVE MENU */
+@media screen and (max-width: 600px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav i {
+    color: white;
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
+
+  .close {
+    position: absolute;
+    right: 3rem;
+    transform: translateY(-20rem);
+    transition: all 0.5s;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid skyblue;
+    z-index: 999;
+    /* transform: translateY(-200%); */
+    transition: all 0.5s;
+  }
+
+  .nav-list li {
+    width: 80%;
+    padding: 5px 0;
+    font-size: 1.6rem;
+    border-bottom: 1px solid white;
+    text-align: center;
+  }
+
+  .nav-list li:first-child {
+    border-top: 1px solid white;
+  }
+
+  .nav-list li a:hover {
+    color: antiquewhite;
+  }
 }

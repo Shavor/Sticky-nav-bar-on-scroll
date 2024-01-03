@@ -43,3 +43,22 @@ function scrollToTop(){
     behavior: 'smooth'
   })
 }
+
+// Scroll Indicator JS
+
+window.onscroll = () => scrollProgress();
+
+function scrollProgress() {
+  const currentState = document.body.scrollTop || document.documentElement.scrollTop;
+
+  const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+
+  const scrollPercentage = (currentState / pageHeight) * 100;
+ console.log(currentState);
+
+  const progressBar = document.querySelector('.progress');
+
+  progressBar.style.visibility = 'visible';
+  progressBar.style.width = scrollPercentage + '%';
+}
